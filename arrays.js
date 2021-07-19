@@ -32,3 +32,4 @@ console.log(students)
 
 //reduce
 students.reduce((totalGrades, student) => totalGrades += student.grade , 0) / students.length
+students.reduce((studentsName, student) => studentsName += student.name + ' ', '')
