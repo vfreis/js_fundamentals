@@ -16,15 +16,19 @@ const students = [
 ]
 
 //For Each
-
 const alunos = students.forEach(student => console.log(student))
 
 //Some
-
 const aprovaram = students.some(student => student.grade > 6)
 console.log(aprovaram)
 
 // Filter
-
 const alunosAprovados = students.filter(student => student.grade >= 7)
 console.log(alunosAprovados)
+
+// Sort
+students.sort((current, next) => current.grade - next.grade)
+console.log(students)
+
+//reduce
+students.reduce((totalGrades, student) => totalGrades += student.grade , 0) / students.length
